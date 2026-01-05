@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design Layout Web - Ir. Soekarno</title>
+    <style>
+        body {
+            background-color: #8B4513; /* Brown */
+            font-family: verdana;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header / Banner */
+        #header {
+            width: 900px;
+            height: 300px;
+            background-color: deeppink;
+            background-image: url('gambar/Soekarno.jpg'); 
+            background-size: cover;
+            background-position: center;
+            margin: 20px auto 0 auto;
+            border: 2px solid #fff;
+        }
+
+        /* Navigasi Menu */
+        #menu-container {
+            width: 900px;
+            margin: 10px auto;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 0;
+        }
+        
+        button {
+            padding: 8px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            background-color: #fff;
+            border: 2px solid red;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Konten Utama */
+        #content {
+            width: 860px;
+            height: auto;
+            background-color: #5F9EA0; /* CadetBlue */
+            margin: 10px auto;
+            padding: 20px;
+            border: 5px dashed #7FFF00; /* Chartreuse */
+        }
+
+        /* Judul dan Teks */
+        h1.main-title {
+            text-align: center;
+            font-family: verdana;
+            color: #E9967A;
+            margin: 20px 0;
+        }
+
+        #content h2 {
+            color: #7FFFD4;
+            font-size: 24px;
+            border-bottom: 2px solid #7FFFD4;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        #content p {
+            color: #000000;
+            font-size: 16px;
+            text-align: justify;
+            line-height: 1.8em;
+        }
+
+        /* Styling Gambar agar Rapi */
+        .img-right {
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 3px solid #fff;
+        }
+
+        .img-center {
+            display: block;
+            margin: 20px auto;
+            border: 4px solid #8B0000;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        #footer {
+            width: 900px;
+            height: 60px;
+            background-color: PINK;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 60px; /* Pusatkan teks vertikal */
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .waktu-box {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        /* Membersihkan Float */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <div id="menu-container">
+        <hr size="2" color="red">
+        <a href="index.html"><button>HOME</button></a> 
+        <a href="GALLERY US.HTML"><button>GALLERY</button></a> 
+        <a href="Formulir.HTML"><button>FORMULIR</button></a> 
+        <a href="ABOUT US.HTML"><button>ABOUT US</button></a>
+        <hr size="2" color="red">
+    </div>
+
+    <div class="waktu-box">
+        <script>
+            var waktu = new Date();
+            var jam = waktu.getHours();
+            var minute = waktu.getMinutes();
+            if (minute < 10) { minute = "0" + minute; }
+            document.write("Tanggal: " + waktu.toDateString() + " | ");
+            document.write("<b>Jam " + jam + ":" + minute + "</b> - ");
+            if (jam >= 0 && jam <= 9) { document.write("Selamat Pagi!"); } 
+            else if (jam <= 13) { document.write("Selamat Siang!"); } 
+            else if (jam <= 17) { document.write("Selamat Sore!"); } 
+            else { document.write("Selamat Malam!"); }
+        </script>
+    </div>
+
+    <div id="content" class="clearfix">
+        
+        <h1 class="main-title">FOTO DAN PENJELASANNYA IR. SOEKARNO</h1>
+        <hr size="3" color="#A9A9A9">
+
+        <div class="clearfix">
+            <img src="Gambar/Soekarno2.jpeg" alt="Ir. Soekarno" width="300" class="img-right">
+            <h2>Profil Ir. Soekarno</h2>
+            <p style="color: #FFEBCD;">
+                Ir. Soekarno, atau yang akrab disapa <b>Bung Karno</b>, adalah sosok sentral dalam sejarah Indonesia. Beliau bukan sekadar presiden pertama, melainkan ideolog, orator ulung, dan "Penyambung Lidah Rakyat".
+            </p>
+            <ul style="color: #663399; font-family: 'Times New Roman'; font-size: 18px; line-height: 1.8em;">
+                <li><b>Nama Asli:</b> Kusno Sosrodihardjo</li>
+                <li><b>Tempat, Tanggal Lahir:</b> Surabaya, 6 Juni 1901</li>
+                <li><b>Meninggal:</b> Jakarta, 21 Juni 1970</li>
+                <li><b>Julukan:</b> Bung Karno, Sang Fajar, Bapak Proklamator</li>
+            </ul>
+        </div>
+
+        <hr size="1" color="#7FFF00">
+
+        <div style="text-align: center;">
+            <img src="Gambar/SK.jpg" alt="Proklamasi" width="500" class="img-center">
+            <h2 style="color: darkred; border: none;">Pembacaan Proklamasi</h2>
+            <p style="color: #fff; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px;">
+                Momen bersejarah saat Bung Karno membacakan teks Proklamasi pada 17 Agustus 1945 di Jalan Pegangsaan Timur No. 56. Didampingi oleh Moh. Hatta, peristiwa ini menandai lahirnya kedaulatan Indonesia di mata dunia.
+            </p>
+        </div>
+
+        <div class="clearfix">
+            <img src="Gambar/Soekarno8.jpeg" alt="Soekarno Muda" width="300" class="img-right">
+            <h2>Arsitek Bangsa (1926-1945)</h2>
+            <p style="color: #C0C0C0;">
+                Pada 4 Juli 1927, Soekarno mendirikan PNI. Strateginya yang non-kooperatif terhadap Belanda membuatnya dipenjara. Pidato "Indonesia Menggugat" menjadi bukti perlawanan intelektual yang mengguncang pemerintah kolonial.
+            </p>
+            <p style="color: #1a1a1a;">
+                Meskipun diasingkan berkali-kali ke Ende hingga Bengkulu, semangatnya tidak padam. Beliau terus mengasah ideologi Marhaenisme yang membela hak-hak rakyat kecil.
+            </p>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <img src="Gambar/Soekarno9.jpeg" alt="Soekarno Ideolog" width="400" class="img-center">
+            <h2 style="color: darkred; border: none; display: block; text-align: center;">Sang Ideolog</h2>
+            <p style="color: #DCDCDC;">
+                Dalam sidang BPUPKI 1 Juni 1945, beliau menggali Pancasila sebagai dasar negara. Pancasila adalah sintesis untuk menyatukan keberagaman suku dan agama di Indonesia di bawah satu payung kebangsaan.
+            </p>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        &copy; 2025 CopyRight - Naila Lesmana (NIM: 251011700171) - Kelas: 01SIFP003
+    </div>
+
+</body>
+</html>

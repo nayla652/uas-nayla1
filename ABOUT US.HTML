@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design Layout Web - About Us</title>
+    <style>
+        body {
+            background-color: #BC8F8F;
+            font-family: verdana;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Banner Header */
+        #header {
+            width: 900px;
+            height: 300px;
+            background-color: red;
+            background-image: url('gambar/Soekarno.jpg'); 
+            background-size: cover;
+            background-position: center;
+            margin: 20px auto 0 auto;
+            border: 2px solid #fff;
+        }
+
+        /* Navigasi Menu */
+        #menu-container {
+            width: 900px;
+            margin: 10px auto;
+            text-align: center;
+        }
+        
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid red;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: red;
+            color: white;
+        }
+
+        /* Konten Utama */
+        #content {
+            width: 860px;
+            height: auto;
+            background-color: #FAEBD7;
+            margin: 10px auto;
+            padding: 20px;
+            border: 5px dashed #6495ED;
+        }
+
+        h1 {
+            text-align: center;
+            color: #D2691E;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: #008B8B;
+            border-bottom: 2px solid #008B8B;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #333;
+            font-size: 16px;
+            text-align: justify;
+            line-height: 1.8em;
+        }
+
+        .highlight-box {
+            background-color: #e5e5e5;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #D2691E;
+        }
+
+        /* Footer */
+        #footer {
+            width: 900px;
+            height: 50px;
+            background-color: #7FFF00;
+            margin: 20px auto 40px auto;
+            text-align: center;
+            line-height: 50px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .waktu-box {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <div id="menu-container">
+        <hr size="2" color="red">
+        <a href="index.html"><button>HOME</button></a> 
+        <a href="GALLERY US.HTML"><button>GALLERY</button></a> 
+        <a href="Formulir.HTML"><button>FORMULIR</button></a> 
+        <a href="ABOUT US.HTML"><button>ABOUT US</button></a>
+        <hr size="2" color="red">
+    </div>
+
+    <div id="content">
+        
+        <div class="waktu-box">
+            <script>
+                var waktu = new Date();
+                var jam = waktu.getHours();
+                var minute = waktu.getMinutes();
+                if (minute < 10) { minute = "0" + minute; }
+                document.write("Tanggal: " + waktu.toDateString() + " | ");
+                document.write("<b>Jam " + jam + ":" + minute + "</b>");
+            </script>
+        </div>
+
+        <hr size="3" color="red">
+        <h1>TENTANG SANG PROKLAMATOR<br>IR. SOEKARNO</h1>
+        <hr size="3" color="red">
+
+        <h2>Sejarah Singkat</h2>
+        <p>
+            Ir. Soekarno adalah Presiden pertama Republik Indonesia yang menjabat pada periode 1945–1967. Beliau adalah seorang tokoh perjuangan yang memainkan peranan penting dalam memerdekakan bangsa Indonesia dari penjajahan Belanda. Beliau adalah penggali Pancasila karena beliau yang pertama kali mencetuskan konsep mengenai dasar negara Indonesia itu dan beliau sendiri yang menamainya Pancasila.
+        </p>
+
+        <div class="highlight-box">
+            <h3 style="margin-top:0; color:#D2691E;">Visi Kebangsaan</h3>
+            <p style="margin-bottom:0;">
+                "Bangsa yang besar adalah bangsa yang menghormati jasa pahlawannya." - Ir. Soekarno. Visi beliau adalah membangun Indonesia yang mandiri (Berdikari), bersatu dalam keberagaman, dan memiliki harga diri di mata dunia Internasional.
+            </p>
+        </div>
+
+        <h2>Pendidikan & Karier</h2>
+        <p>
+            Soekarno menyelesaikan pendidikannya di Technische Hoogeschool te Bandoeng (sekarang ITB) dengan mengambil jurusan teknik sipil dan lulus pada tahun 1926. Karier politiknya dimulai dengan mendirikan Partai Nasional Indonesia (PNI) yang bertujuan untuk kemerdekaan Indonesia. Meskipun sering menghadapi pengasingan oleh pemerintah kolonial, semangatnya untuk merdeka tidak pernah padam hingga proklamasi dikumandangkan pada 17 Agustus 1945.
+        </p>
+
+        <center>
+            <br>
+            <i style="color: #6495ED;">Halaman ini dibuat untuk mengenang jasa Bapak Bangsa Indonesia.</i>
+        </center>
+    </div>
+
+    <div id="footer">
+        &copy; 2025 CopyRight - Naila Lesmana (NIM: 251011700171) - Kelas: 01SIFP003
+    </div>
+
+</body>
+</html>

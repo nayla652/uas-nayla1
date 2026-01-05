@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design Layout Web - Formulir</title>
+    <style>
+        body {
+            background-color: #BC8F8F;
+            font-family: verdana;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Banner Header */
+        #header {
+            width: 900px;
+            height: 300px;
+            background-color: red;
+            background-image: url('gambar/Soekarno.jpg'); 
+            background-size: cover;
+            background-position: center;
+            margin: 20px auto 0 auto;
+            border: 2px solid #fff;
+        }
+
+        /* Navigasi Menu */
+        #menu-container {
+            width: 900px;
+            margin: 10px auto;
+            text-align: center;
+        }
+        
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid red;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: red;
+            color: white;
+        }
+
+        /* Konten Utama */
+        #content {
+            width: 860px;
+            height: auto;
+            background-color: #FAEBD7;
+            margin: 10px auto;
+            padding: 20px;
+            border: 5px dashed #6495ED;
+        }
+
+        h1 {
+            text-align: center;
+            color: #D2691E;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: #008B8B;
+            text-align: center;
+        }
+
+        /* Styling Form */
+        .form-table {
+            background-color: #e5e5e5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        #footer {
+            width: 900px;
+            height: 50px;
+            background-color: #7FFF00;
+            margin: 20px auto 40px auto;
+            text-align: center;
+            line-height: 50px; /* Pusatkan teks vertikal */
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .waktu-box {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <div id="menu-container">
+        <hr size="2" color="red">
+        <a href="index.html"><button>HOME</button></a> 
+        <a href="GALLERY US.HTML"><button>GALLERY</button></a> 
+        <a href="Formulir.HTML"><button>FORMULIR</button></a> 
+        <a href="ABOUT US.HTML"><button>ABOUT US</button></a>
+        <hr size="2" color="red">
+    </div>
+
+    <div id="content">
+        
+        <div class="waktu-box">
+            <script>
+                var waktu = new Date();
+                var jam = waktu.getHours();
+                var minute = waktu.getMinutes();
+                if (minute < 10) { minute = "0" + minute; }
+
+                document.write("Tanggal: " + waktu.toDateString() + "<br>");
+                document.write("<b>Sekarang Jam " + jam + ":" + minute + "</b> - ");
+
+                if (jam >= 0 && jam <= 9) { document.write("Selamat Pagi!"); } 
+                else if (jam <= 13) { document.write("Selamat Siang!"); } 
+                else if (jam <= 17) { document.write("Selamat Sore!"); } 
+                else { document.write("Selamat Malam!"); }
+            </script>
+        </div>
+
+        <hr size="3" color="red">
+        <h1>HUBUNGI KAMI PRESIDEN 1 INDONESIA<br>IR. SOEKARNO</h1>
+        <hr size="3" color="red">
+
+        <br>
+        <h2>Formulir Kontak</h2>
+        
+        <form action="#" method="post">
+            <table class="form-table" cellspacing="10">
+                <tr>
+                    <td align="right"><label for="nama">Nama:</label></td>
+                    <td><input type="text" id="nama" name="nama" size="40" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="alamat">Alamat:</label></td>
+                    <td><textarea id="alamat" name="alamat" rows="3" cols="38" required></textarea></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="kota">Kota:</label></td>
+                    <td><input type="text" id="kota" name="kota" size="40" required></td>
+                </tr>
+                <tr>
+                    <td align="right">Jenis Kelamin:</td>
+                    <td>
+                        <input type="radio" id="laki" name="jenis_kelamin" value="Laki-laki" required>
+                        <label for="laki">Laki-laki</label>
+                        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" required>
+                        <label for="perempuan">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="usia">Usia:</label></td>
+                    <td><input type="number" id="usia" name="usia" style="width: 50px;" required> Tahun</td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="pekerjaan">Pekerjaan:</label></td>
+                    <td><input type="text" id="pekerjaan" name="pekerjaan" size="40" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="hobby">Hobby:</label></td>
+                    <td><input type="text" id="hobby" name="hobby" size="40" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" size="40" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="pesan">Pesan:</label></td>
+                    <td><textarea id="pesan" name="pesan" rows="5" cols="38" required></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Kirim Data" style="padding: 10px 20px; background-color: #008B8B; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        <input type="reset" value="Reset" style="padding: 10px 20px; cursor: pointer;">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="footer">
+        &copy; 2025 CopyRight - Naila Lesmana (NIM: 251011700171) - Kelas: 01SIFP003
+    </div>
+
+</body>
+</html>

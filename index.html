@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design Layout Web - Ir. Soekarno</title>
+    <style>
+        body {
+            background-color: #DEB887;
+            font-family: verdana;
+            margin: 0;
+            padding: 0;
+        }
+        /* CSS untuk Banner/Header */
+        #header {
+            width: 900px;
+            height: 300px;
+            background-color: red;
+            /* Pastikan file gambar ada di folder yang benar */
+            background-image: url('gambar/Soekarno.jpg'); 
+            background-size: cover;
+            background-position: center;
+            margin: 20px auto 0 auto;
+            border: 2px solid #000;
+        }
+        /* CSS untuk Navigasi Menu */
+        #menu-container {
+            width: 900px;
+            margin: 10px auto;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid red;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: red;
+            color: white;
+        }
+        /* CSS untuk Konten */
+        #content {
+            width: 860px;
+            height: auto;
+            background-color: pink;
+            margin: 10px auto;
+            padding: 20px;
+            border: 5px dashed red;
+        }
+        #content h2 {
+            color: darkred;
+            font-size: 24px;
+        }
+        #content p {
+            color: blue;
+            font-size: 16px;
+            text-align: justify;
+            line-height: 1.8em;
+        }
+        /* CSS untuk Footer */
+        #footer {
+            width: 900px;
+            height: 50px;
+            background-color: skyblue;
+            margin: 10px auto 30px auto;
+            text-align: center;
+            line-height: 50px; /* Membuat teks di tengah secara vertikal */
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .waktu-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <div id="menu-container">
+        <hr size="2" color="red">
+        <a href="index.html"><button>Home</button></a> 
+        <a href="GALLERY US.HTML"><button>Gallery</button></a> 
+        <a href="Formulir.HTML"><button>Formulir</button></a> 
+        <a href="ABOUT US.HTML"><button>About Us</button></a>
+        <hr size="2" color="red">
+    </div>
+
+    <div class="waktu-info">
+        <script>
+            var waktu = new Date();
+            var jam = waktu.getHours();
+            var minute = waktu.getMinutes();
+            if (minute < 10) { minute = "0" + minute; }
+
+            document.write("Tanggal: " + waktu.toDateString() + "<br>");
+            document.write("<b>Sekarang Jam " + jam + ":" + minute + "</b><br>");
+
+            if (jam >= 0 && jam <= 9) { document.write("Selamat Pagi!"); } 
+            else if (jam <= 13) { document.write("Selamat Siang!"); } 
+            else if (jam <= 17) { document.write("Selamat Sore!"); } 
+            else { document.write("Selamat Malam!"); }
+        </script>
+    </div>
+
+    <div id="content">
+        <div style="text-align: center;">
+            <hr size="3" color="#191970">
+            <h1 style="color: #DA70D6;">IR. SOEKARNO</h1>
+            <hr size="3" color="#191970">
+        </div>
+
+        <h2>Kepemimpinan dan Proklamasi Kemerdekaan</h2>
+        <p style="font-family: 'Times New Roman'; font-size: 18px; color: #663399;">
+            Ir. Soekarno adalah tokoh sentral dalam perjuangan kemerdekaan Indonesia dan merupakan Presiden pertama Republik Indonesia. 
+            Bersama Mohammad Hatta, Soekarno memproklamasikan kemerdekaan Indonesia pada tanggal 17 Agustus 1945. 
+            Pidato dan visi kepemimpinan Soekarno sangat berperan dalam menyatukan berbagai suku, agama, dan golongan di nusantara.
+        </p>
+
+        <h2>Masa Akhir Jabatan</h2>
+        <p>
+            Peristiwa G30S/PKI pada tahun 1965 secara perlahan mengikis kekuasaannya. Akhirnya, kekuasaan Soekarno beralih 
+            kepada Jenderal Soeharto, menandai berakhirnya era kepemimpinan sang proklamator yang dikenal sebagai "Penyambung Lidah Rakyat".
+        </p>
+    </div>
+
+    <div id="footer">
+        &copy; 2025 CopyRight - Naila Lesmana (NIM: 251011700171) - Kelas: 01SIFP003
+    </div>
+
+</body>
+</html>
